@@ -23,3 +23,10 @@ h1{
     float: left;
     border: 3px solid #A52A2A;
 }
+
+.boardbox {
+    height: 50px;
+    width: 50px;
+    z-index: -1;
+
+}
