@@ -46,3 +46,17 @@ h1{
 .right {
     float: right;
 }
+
+/* Dice style */
+
+
+
+#dice {
+    height: 80px;
+    width: 80px;
+    font-size: 70px;
+    color: black;
+    margin: auto;
+    border: none;
+    background-color: white;
+}
