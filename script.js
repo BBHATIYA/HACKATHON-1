@@ -3,7 +3,9 @@ let a;
 let id= 100;
 
 
-for (let a=0;a<5;a++)
+
+
+ for (let a=0;a<5;a++)
 {
   for (let b=0;b<=9;b++)
     {
@@ -16,3 +18,13 @@ for (let a=0;a<5;a++)
       id--;
     }
 }
+
+
+
+
+// let getBoard =document.getElementById("board");
+// let divs = document.createElement('div');
+// divs.classList.add = 'boardbox left';
+// let leftId = `box${id}`;
+// divs.setAttribute('id', )  
+// getBoard.appendChild(divs);
