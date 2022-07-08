@@ -6,13 +6,6 @@ h1{
     border: 2px solid black;
 }
 
-#mainContainer{
-    /* border: 4px solid yellow; */
-    display: flex;
-    justify-content: space-evenly;
-}
-
-
 /* main box css */
 .main {
     height: 525px;
@@ -24,28 +17,13 @@ h1{
     border: 3px solid #A52A2A;
 }
 
+/* All Divs */
 .superimposed {
-
     height: 500px;
     width: 500px;
     position: absolute;
     top: 90px;
     left: 20px;
-}
-
-#rightSide{
-  height: : 500px;
-  width:200px;
-  margin-left:500px;
-}
-
-.btn{
-  height: 40px;
-  width: 100px;
-  margin-left: 50px;
-  margin-top: 10rem;
-  margin-bottom: 10px;
-  border-radius: 5px;
 }
 
 .boardbox {
@@ -63,6 +41,22 @@ h1{
     float: right;
 }
 
+/* button */
+#rightSide{
+  height:500px;
+  width:200px;
+  margin-left:500px;
+}
+
+.btn{
+  height: 40px;
+  width: 100px;
+  margin-left: 50px;
+  margin-top: 10rem;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
 /* Dice style */
 
 .img{
@@ -71,7 +65,6 @@ h1{
   margin:2px 0px 3px 0px;
 
 }
-
 
 #dice {
     height: 80px;
