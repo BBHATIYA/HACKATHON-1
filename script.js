@@ -2,7 +2,7 @@
 let a;
 let id= 100;
 let number = 1;
-let n = 1;
+let numberOnBoard = 0;
 let m = 0;
 let dices=["","⚀","⚁","⚂","⚃","⚄","⚅"];
 
@@ -35,28 +35,48 @@ let dices=["","⚀","⚁","⚂","⚃","⚄","⚅"];
         id--;
     }
 }
+// Adding image pawn for player
 
-document.getElementById("box"+number).innerHTML="<img id='counter' class='img' src='chess-pawn.png'></img>"
-let play=function()
-{
+let diceImg = document.getElementById("box"+number);
+let imageTag = document.createElement("img");
+imageTag.classList.add('img');
+imageTag.setAttribute('id', 'counter');
+imageTag.src = 'chess-pawn.png';
+diceImg.appendChild(imageTag);
+
+
+// New game button function
+
+let playButton =document.getElementById('Play');
+playButton.addEventListener('click', startPlay);
+
+function startPlay()
+{  
   number=1;
   document.getElementById("board").style.visibility = "visible";
   document.getElementById("dice").style.visibility = "visible";
   document.getElementById("Play").style.visibility = "hidden";
   document.getElementById("dice").innerHTML=dices[1];
 }
-let random = function()
-{
+
+// Dice button function with getting random dice
+
+let diceButton = document.getElementById('dice');
+
+diceButton.addEventListener('click', randomDice)
+
+function randomDice()
+{  
   document.getElementById("dice").disabled=false;
-  var dices = ["","&#9856","&#9857","&#9858","&#9859","&#9860","&#9861"];
-  a = Math.ceil(Math.random()*6);
-  document.getElementById("dice").innerHTML = dices[a];
-  if(n+a>100)
-  {
-    a=0;
-  }
-  d=0;
-  move()
+  let dices=["","⚀","⚁","⚂","⚃","⚄","⚅"];
+  a= Math.ceil(Math.random()*6);
+  document.getElementById("dice").innerHTML=dices[a];
+  if(numberOnBoard+a>100)
+    {
+      a=0;
+     }
+     d=0;
+     move()
 }
 
  let move = function(){
@@ -65,56 +85,75 @@ let random = function()
 }
 let move2 =function()
 {
-   n++;
+   numberOnBoard++;
    m++;
    if(m < (a) || m==(a))
    {
      if(d==(a-1))
      {
-       if(n == 37)
+       if(numberOnBoard == 37)
        {
-         n = 3;
+         numberOnBoard = 3;
        }
-       else if (n == 4)
+       else if (numberOnBoard == 4)
        {
-         n = 56;
+         numberOnBoard = 56;
        }
-       else if (n == 28)
+       else if (numberOnBoard == 28)
        {
-         n = 10;
+         numberOnBoard = 10;
        }
-       else if (n == 12)
+       else if (numberOnBoard == 12)
        {
-         n = 50;
+         numberOnBoard = 50;
        }
-       else if (n == 14)
+       else if (numberOnBoard == 14)
        {
-         n = 55;
+         numberOnBoard = 55;
        }
-       else if (n == 47)
+       else if (numberOnBoard == 47)
        {
-         n = 16;
+         numberOnBoard = 16;
        }
-       else if (n == 22)
+       else if (numberOnBoard == 22)
        {
-         n = 58;
+         numberOnBoard = 58;
        }
-       else if (n == 75)
+       else if (numberOnBoard == 75)
        {
-         n = 32;
+         numberOnBoard = 32;
        }
-       else if (n == 41)
+       else if (numberOnBoard == 41)
        {
-         n = 79;
+         numberOnBoard = 79;
        }
-       else if (n == 76)
+       else if (numberOnBoard == 96)
        {
-         n = 42;
+         numberOnBoard = 42;
        }
-       else if (n == 54)
+       else if (numberOnBoard == 54)
        {
-         n = 88;
-       }
+         numberOnBoard = 88;
+       } else if (numberOnBoard == 94){
+        numberOnBoard = 71
+       } else if (numberOnBoard==100){
+             alert("Yeeee!!! You win...");
+             document.getElementById("Play").style.visibility = "visible";
+             document.getElementById("dice").style.visibility = "hidden";
+             numberOnBoard=1;
+           } else
+           {
+              numberOnBoard=numberOnBoard;
+           }
      }
-   }
+        let s=document.getElementById("counter");
+        document.getElementById("box"+numberOnBoard).appendChild(s);
+        d+=1;
+   } else
+     {
+        m=0;
+        numberOnBoard-=1;
+        clearInterval(t);
+        document.getElementById("dice").disabled=false;
+     }
 }
