@@ -33,6 +33,21 @@ h1{
     left: 20px;
 }
 
+#rightSide{
+  height: : 500px;
+  width:200px;
+  margin-left:500px;
+}
+
+.btn{
+  height: 40px;
+  width: 100px;
+  margin-left: 50px;
+  margin-top: 10rem;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
 .boardbox {
     height: 50px;
     width: 50px;
@@ -43,12 +58,19 @@ h1{
     float: left;
 }
 
+
 .right {
     float: right;
 }
 
 /* Dice style */
 
+.img{
+  height:45px;
+  width:40px;
+  margin:2px 0px 3px 0px;
+
+}
 
 
 #dice {
@@ -59,4 +81,8 @@ h1{
     margin: auto;
     border: none;
     background-color: white;
+    border-radius: 20%;
+    margin-left: 60px;
+    padding-bottom: 30px;
+
 }
