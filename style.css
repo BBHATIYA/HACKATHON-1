@@ -17,6 +17,7 @@ h1{
     border: 3px solid #A52A2A;
 }
 
+/* All Divs */
 .superimposed {
     height: 500px;
     width: 500px;
@@ -25,6 +26,22 @@ h1{
     left: 20px;
 }
 
+.boardbox {
+    height: 50px;
+    width: 50px;
+    z-index: -1;
+}
+
+.left {
+    float: left;
+}
+
+
+.right {
+    float: right;
+}
+
+/* button */
 #rightSide{
   height:500px;
   width:200px;
@@ -38,20 +55,6 @@ h1{
   margin-top: 10rem;
   margin-bottom: 10px;
   border-radius: 5px;
-}
-
-.boardbox {
-    height: 50px;
-    width: 50px;
-    z-index: -1;
-}
-
-.left {
-    float: left;
-}
-
-.right {
-    float: right;
 }
 
 /* Dice style */
