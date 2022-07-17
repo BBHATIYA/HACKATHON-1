@@ -7,6 +7,10 @@ let dices = ["", "⚀", "⚁", "⚂", "⚃", "⚄", "⚅"];
 
 // Creating divs left and right
 
+//  ----------------
+//  The loops need to be in functions
+// --------------
+
 for (let a = 0; a < 5; a++) {
   for (let b = 0; b <= 9; b++) {
     let getBoard = document.getElementById("board");
@@ -18,6 +22,7 @@ for (let a = 0; a < 5; a++) {
     getBoard.appendChild(divs);
     id--;
   }
+
   for (let c = 0; c <= 9; c++) {
     let getBoard = document.getElementById("board");
     let divsRight = document.createElement("div");
@@ -29,6 +34,7 @@ for (let a = 0; a < 5; a++) {
     id--;
   }
 }
+
 // Adding image pawn for player
 
 let diceImg = document.getElementById("box" + number);
@@ -59,6 +65,10 @@ diceButton.addEventListener("click", randomDice);
 
 function randomDice() {
   document.getElementById("dice").disabled = false;
+  //  -------------
+  // why do you create the dices array again?
+  //--------------------
+
   let dices = ["", "⚀", "⚁", "⚂", "⚃", "⚄", "⚅"];
   a = Math.ceil(Math.random() * 6);
   document.getElementById("dice").innerHTML = dices[a];
